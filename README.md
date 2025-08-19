@@ -1,17 +1,19 @@
-# 🎮 Avalanche Arcade  
 
-Avalanche Arcade is a **Web3 gaming hub** where players can enjoy multiple arcade-style games, earn rewards, and trade in-game assets.  
-The platform uses **AVAX** and **DT (Arcade Token)** for gameplay, rewards, and marketplace interactions.  
-Each game supports **NFT-based collectibles** powered by an **ERC-1155 smart contract**, along with a **DT ERC-20 token** for in-game economy.  
+
+# 🎮 ZetaChain Arcade
+
+ZetaChain Arcade is a **Web3 gaming hub** where players can enjoy multiple arcade-style games, earn rewards, and trade in-game assets.
+The platform uses **ZETA** and **DT (Arcade Token)** for gameplay, rewards, and marketplace interactions.
+Each game supports **NFT-based collectibles** powered by an **ERC-1155 smart contract**, along with a **DT ERC-20 token** for in-game economy.
 
 ---
 
 ## 🚀 Games Available
 
-- 🐉 **Dragon Runner** – Endless runner game with NFT rewards.  
-- 🏎 **Road Rivals** – High-speed car racing with leaderboards.  
-- 🐍 **Snake Game** – Classic snake reimagined with blockchain rewards.  
-- 🏐 **Wall Ball** – Reflex and timing challenge game.  
+* 🐉 **Dragon Runner** – Endless runner game with NFT rewards.
+* 🏎 **Road Rivals** – High-speed car racing with leaderboards.
+* 🐍 **Snake Game** – Classic snake reimagined with blockchain rewards.
+* 🏐 **Wall Ball** – Reflex and timing challenge game.
 
 Each game is integrated with **Marketplace**, **Leaderboard**, and **Play-to-Earn rewards**.
 
@@ -19,65 +21,70 @@ Each game is integrated with **Marketplace**, **Leaderboard**, and **Play-to-Ear
 
 ## 🎯 Features
 
-- **DT Token Economy**  
-  Players use DT tokens to play, upgrade, and trade. DT can be bought with AVAX.  
+* **DT Token Economy**
+  Players use DT tokens to play, upgrade, and trade. DT can be bought with ZETA.
 
-- **NFT Game Assets (ERC-1155)**  
-  Each game has unique NFT rewards (skins, boosts, limited editions).  
+* **NFT Game Assets (ERC-1155)**
+  Each game has unique NFT rewards (skins, boosts, limited editions).
 
-- **On-Chain Leaderboards**  
-  High scores are recorded on-chain for transparency and seasonal competitions.  
+* **On-Chain Leaderboards**
+  High scores are recorded on-chain for transparency and seasonal competitions.
 
-- **Marketplace**  
-  Buy, sell, or trade NFT collectibles and power-ups using DT tokens.  
+* **Marketplace**
+  Buy, sell, or trade NFT collectibles and power-ups using DT tokens.
 
-- **Secure Smart Contracts**  
-  Two-contract system:  
-  - `DToken` (ERC-20) – Arcade Token for gameplay and marketplace.  
-  - `GameAssets` (ERC-1155) – NFT assets and rewards.  
+* **Secure Smart Contracts**
+  Two-contract system:
+
+  * `DToken` (ERC-20) – Arcade Token for gameplay and marketplace.
+  * `GameAssets` (ERC-1155) – NFT assets and rewards.
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Blockchain:** Avalanche (C-Chain, EVM Compatible)  
-- **Smart Contracts:** Solidity + OpenZeppelin (ERC-20 + ERC-1155)  
-- **Frontend:** React + Tailwind + TypeScript  
-- **Game Engine:** HTML5/Canvas, React Components  
-- **Integration:** Ethers.js + WalletConnect + MetaMask  
-- **Storage:** IPFS for NFT metadata  
+* **Blockchain:** ZetaChain (EVM Compatible)
+* **Smart Contracts:** Solidity + OpenZeppelin (ERC-20 + ERC-1155)
+* **Frontend:** React + Tailwind + TypeScript
+* **Game Engine:** HTML5/Canvas, React Components
+* **Integration:** Ethers.js + WalletConnect + MetaMask
+* **Storage:** IPFS for NFT metadata
 
 ---
 
 ## 📜 Smart Contract Overview
 
 ### 1️⃣ DT Token (ERC-20)
-- Minted when players buy with AVAX.  
-- Used for gameplay entry fees, marketplace trades, and rewards.  
-- Example functions:  
-  - `buyDT()` – Swap AVAX → DT  
-  - `redeemDT()` – Convert DT back to AVAX  
-  - `balanceOf(address)` – Check balance  
+
+* Minted when players buy with ZETA.
+* Used for gameplay entry fees, marketplace trades, and rewards.
+* Example functions:
+
+  * `buyDT()` – Swap ZETA → DT
+  * `redeemDT()` – Convert DT back to ZETA
+  * `balanceOf(address)` – Check balance
 
 ### 2️⃣ Game Assets (ERC-1155)
-- NFT assets linked to each game.  
-- Unique IDs for games:  
-  - `1` → Dragon Runner  
-  - `2` → Road Rivals  
-  - `3` → Snake Game  
-  - `4` → Wall Ball  
-- Example functions:  
-  - `mintAsset(address, id, amount)`  
-  - `burnAsset(address, id, amount)`  
-  - `marketplaceBuy(uint256 id, uint256 priceInDT)`  
+
+* NFT assets linked to each game.
+* Unique IDs for games:
+
+  * `1` → Dragon Runner
+  * `2` → Road Rivals
+  * `3` → Snake Game
+  * `4` → Wall Ball
+* Example functions:
+
+  * `mintAsset(address, id, amount)`
+  * `burnAsset(address, id, amount)`
+  * `marketplaceBuy(uint256 id, uint256 priceInDT)`
 
 ---
 
 ## 📂 Project Structure
 
 ```
-
-AvalancheArcade/
+ZetaChainArcade/
 │
 ├── contracts/        # Solidity smart contracts
 │   ├── DToken.sol    # ERC-20 Arcade Token
@@ -92,18 +99,18 @@ AvalancheArcade/
 ├── metadata/         # NFT metadata JSON files
 ├── test/             # Smart contract tests
 └── README.md
-
-````
+```
 
 ---
 
 ## ⚡ Getting Started
 
 ### 1️⃣ Clone the Repository
+
 ```bash
-git clone https://github.com/itzDhruv/AvalancheArcade.git
-cd AvalancheArcade
-````
+git clone https://github.com/itzDhruv/ZetaChainArcade.git
+cd ZetaChainArcade
+```
 
 ### 2️⃣ Install Dependencies
 
@@ -115,12 +122,10 @@ npm install
 
 ```bash
 npx hardhat compile
-npx hardhat run scripts/deploy.js --network fuji
+npx hardhat run scripts/deploy.js --network zetachain_testnet
 ```
 
 ### 4️⃣ Update Frontend Config
-
-Add the deployed contract addresses into:
 
 ```ts
 // frontend/config/contracts.ts
@@ -133,7 +138,7 @@ export const GAMEASSETS_ADDRESS = "0x456...def";
 ## 🎮 How It Works In-Game
 
 1. Player connects wallet.
-2. Player buys DT tokens with AVAX.
+2. Player buys DT tokens with ZETA.
 3. Player chooses a game (Dragon Runner, Road Rivals, Snake, Wall Ball).
 4. Entry fee (DT) is deducted → gameplay starts.
 5. Based on score/performance, rewards are distributed:
@@ -157,7 +162,7 @@ npx hardhat test
 
 * Seasonal tournaments with unique NFT rewards.
 * Mobile app version.
-* Cross-chain support (Ethereum, Polygon).
+* Cross-chain support (Ethereum, Polygon, Avalanche).
 * NFT staking for in-game perks.
 
 ---
@@ -174,10 +179,3 @@ MIT License — feel free to fork and build upon this project.
 📧 Email: [dhruvdobariya897@gmail.com](mailto:dhruvdobariya897@gmail.com)
 📍 Surat, Gujarat, India
 
-**Rakesh kumawat**
- 📧 Email: rakeshkumawatrrkk128777@gmail.com 
- 📍 Mumbai, Maharashtra, India
-
-**Aniket Raikar** 
- 📧 Email: aniketraikar82@gmail.com 
-📍 Mumbai, Maharashtra, India
