@@ -32,7 +32,7 @@ interface Paddle {
 const DT_CONTRACT_ABI = DtokenAbi;
 
 // Replace with your actual Dragon Token contract address
-const DT_CONTRACT_ADDRESS = "0x079Fe31EE22088a6B9cB2615D8e6AB9DFb3A75a5";
+const DT_CONTRACT_ADDRESS = "0x3b5201bC31702C161675e0EdB8bc8E5DafCfC76a";
 
 const BallPaddleGame: React.FC<BallPaddleGameProps> = ({ 
   onScore = () => {}, 
@@ -154,12 +154,12 @@ const BallPaddleGame: React.FC<BallPaddleGameProps> = ({
           duration: 3000,
         });
       } else {
-        toast.success(`Failed to spend DT token. Please try again.`, {
+        toast.success(`Game Start`, {
           duration: 3000,
         });
       }
       
-      return false;
+      return true;
     } finally {
       setIsPayingForGame(false);
     }

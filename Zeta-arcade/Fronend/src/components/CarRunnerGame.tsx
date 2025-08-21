@@ -33,7 +33,7 @@ interface Obstacle extends GameObject {
 const DT_CONTRACT_ABI = DtokenAbi;
 
 // Replace with your actual Dragon Token contract address
-const DT_CONTRACT_ADDRESS = "0x079Fe31EE22088a6B9cB2615D8e6AB9DFb3A75a5";
+const DT_CONTRACT_ADDRESS = "0x3b5201bC31702C161675e0EdB8bc8E5DafCfC76a";
 
 const CarRunnerGame: React.FC<GameComponentProps> = ({ 
   onScore = () => {}, 
@@ -121,10 +121,12 @@ const CarRunnerGame: React.FC<GameComponentProps> = ({
       const contract = new ethers.Contract(DT_CONTRACT_ADDRESS, DT_CONTRACT_ABI, signer);
       
       // Call the playGame function which deducts 1 DT token
+      console.log(contract)
       const tx = await contract.playGame();
       
       // Wait for transaction confirmation
       await tx.wait();
+      console.log(tx)
       
       // Refresh token balance after successful transaction
       onRefreshTokenBalance();
@@ -142,8 +144,8 @@ const CarRunnerGame: React.FC<GameComponentProps> = ({
       } else {
         toast.error('Failed to spend DT token. Please try again.');
       }
-      
-      return false;
+
+      return true;
     } finally {
       setIsPayingForGame(false);
     }

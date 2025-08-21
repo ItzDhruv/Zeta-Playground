@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import NftAbi from "../ContractAbi/Nft.json"
 
 const GAME_SCORE_NFT_ABI = NftAbi;
-const GAME_SCORE_NFT_CONTRACT = "0xA4Ed3766BcE57eD54D13B94560a7eEDd2969cfF8";
+const GAME_SCORE_NFT_CONTRACT = "0xE14DE626Be4099491DdF40605a7C1930BFCb6F72";
 
 interface NFTMarketplaceProps {
   walletAddress: string;
@@ -627,7 +627,7 @@ const NFTMarketplace: React.FC<NFTMarketplaceProps> = ({
         </h4>
         <div className="text-sm text-gray-300 space-y-1">
           <p><span className="text-gray-400">Contract:</span> <code className="bg-gray-800 px-2 py-1 rounded font-mono">{GAME_SCORE_NFT_CONTRACT}</code></p>
-          <p><span className="text-gray-400">Network:</span> Avalanche Fuji</p>
+          <p><span className="text-gray-400">Network:</span>ZetaChain Testnet</p>
           <p><span className="text-gray-400">Standard:</span> ERC-1155</p>
         </div>
       </div>

@@ -14,7 +14,7 @@ interface WalletInfo {
 }
 
 const DT_CONTRACT_ABI = DtokenAbi as any;
-const DT_CONTRACT_ADDRESS = "0x079Fe31EE22088a6B9cB2615D8e6AB9DFb3A75a5";
+const DT_CONTRACT_ADDRESS = "0x3b5201bC31702C161675e0EdB8bc8E5DafCfC76a";
 
 declare global {
   interface Window {
@@ -236,7 +236,7 @@ function App() {
       <footer className="border-t border-gray-800 mt-16">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-gray-400">
-            <p>&copy; 2025 DragonNFT. A blockchain-powered endless runner experience.</p>
+            <p>&copy; 2025 Zeta-Playground. A blockchain-powered endless runner experience.</p>
           </div>
         </div>
       </footer>

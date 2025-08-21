@@ -25,7 +25,7 @@ interface HeaderProps {
 const DT_CONTRACT_ABI = DtokenAbi;
 
 // Replace with your actual Dragon Token contract address
-const DT_CONTRACT_ADDRESS = "0x079Fe31EE22088a6B9cB2615D8e6AB9DFb3A75a5";
+const DT_CONTRACT_ADDRESS = "0x3b5201bC31702C161675e0EdB8bc8E5DafCfC76a";
 
 // Token price from smart contract: 0.0002 ETH per token
 const TOKEN_PRICE_ETH = "0.0002";
@@ -130,7 +130,7 @@ const Header: React.FC<HeaderProps> = ({
       console.error('Error buying DT tokens:', error);
       
       // Handle specific error cases
-      let errorMessage = 'Failed to purchase tokens. Please try again.';
+      let errorMessage = 'Token buying...';
       
       if (error.code === 'ACTION_REJECTED' || error.code === 4001) {
         errorMessage = 'Transaction cancelled by user.';
@@ -166,7 +166,7 @@ const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <img src="/dragonlogo.jpg" alt="Dragon Logo" className="h-8 w-8 rounded" />
-              <h1 className="text-2xl font-bold">Avalanche arcade</h1>
+              <h1 className="text-2xl font-bold">Zeta-Playground</h1>
             </div>
 
             <nav className="hidden md:flex items-center space-x-8">
@@ -306,7 +306,7 @@ const Header: React.FC<HeaderProps> = ({
 
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Amount (Avax)
+                  Amount (Zeta)
                 </label>
                 <input
                   type="number"
@@ -322,10 +322,10 @@ const Header: React.FC<HeaderProps> = ({
 
               <div className="text-sm text-gray-400 bg-gray-800 p-3 rounded-lg">
                 <p className="mb-1">
-                  <strong>Token Price:</strong> {TOKEN_PRICE_ETH} Avax per DT
+                  <strong>Token Price:</strong> {TOKEN_PRICE_ETH} Zeta per DT
                 </p>
                 <p className="mb-1">
-                  <strong>You will pay:</strong> {formatEthAmount(buyAmount)} Avax
+                  <strong>You will pay:</strong> {formatEthAmount(buyAmount)} Zeta
                 </p>
                 {buyAmount && (
                   <p className="text-green-400">

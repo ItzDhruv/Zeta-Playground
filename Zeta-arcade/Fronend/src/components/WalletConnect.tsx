@@ -29,7 +29,7 @@ const WalletConnect: React.FC<WalletConnectProps> = ({ wallet, onConnect, onDisc
   return (
     <div className="flex items-center space-x-4">
       <div className="hidden md:flex flex-col text-right text-sm">
-        <span className="text-gray-300">{parseFloat(wallet.balance).toFixed(4)} Avax</span>
+        <span className="text-gray-300">{parseFloat(wallet.balance).toFixed(4)} Zeta</span>
         <span className="text-gray-500">
           {`${wallet.address.slice(0, 6)}...${wallet.address.slice(-4)}`}
         </span>
